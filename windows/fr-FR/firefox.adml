@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="7.9" schemaVersion="1.0">
+<policyDefinitionResources revision="7.11" schemaVersion="1.0">
   <displayName/>
   <description/>
   <resources>
@@ -86,6 +86,7 @@
       <string id="SUPPORTED_FF148_ONLY">Firefox 148 ou supérieur</string>
       <string id="SUPPORTED_FF14902_ONLY">Firefox 149.0.2 ou supérieur</string>
       <string id="SUPPORTED_FF150_ONLY">Firefox 150 ou supérieur</string>
+      <string id="SUPPORTED_FF151_ONLY">Firefox 151 ou supérieur</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">Permissions</string>
       <string id="Camera_group">Caméra</string>
@@ -122,6 +123,7 @@
       <string id="GenerativeAI_group">IA générative</string>
       <string id="BrowserDataBackup_group">Sauvegarde des données du navigateur</string>
       <string id="AIControls_group">Contrôles de l'IA</string>
+      <string id="LocalNetworkAccess_group">Accès au réseau local</string>
       <string id="Allow">Sites autorisés</string>
       <string id="AllowSession">Sites autorisés (Session seulement)</string>
       <string id="Block">Sites bloqués</string>
@@ -1425,6 +1427,30 @@ Si défini sur "blocked", la fenêtre intelligente est désactivée et les utili
       <string id="AIControls_SmartWindow_Locked_Explain">Si cette stratégie est activée, l’utilisateur ne peut pas modifier le paramètre de fenêtre intelligente.
 
 Si cette stratégie est désactivée ou non configurée, l’utilisateur peut modifier le paramètre de fenêtre intelligente.</string>
+      <string id="XSLTEnabled">Activer XSLT</string>
+      <string id="XSLTEnabled_Explain">Si cette stratégie est activée, XSLT (Extensible Stylesheet Language Transformations) est activé.
+
+Si cette stratégie est désactivée, XSLT (Extensible Stylesheet Language Transformations) est désactivé.
+
+Si cette stratégie n’est pas configurée, le paramètre par défaut de Firefox s’applique.</string>
+      <string id="LocalNetworkAccess_Enabled">Activé</string>
+      <string id="LocalNetworkAccess_Enabled_Explain">Si cette stratégie est activée ou non configurée, les contrôles de sécurité pour l’accès au réseau local sont appliqués.
+
+Si cette stratégie est désactivée, les contrôles de sécurité pour l’accès au réseau local ne sont pas appliqués.</string>
+      <string id="LocalNetworkAccess_BlockTrackers">Bloquer les traqueurs</string>
+      <string id="LocalNetworkAccess_BlockTrackers_Explain">Si cette stratégie est activée, les traqueurs tiers ne peuvent pas accéder à localhost ni aux ressources du réseau local.
+
+Si cette stratégie est désactivée ou non configurée, les traqueurs tiers ne sont pas empêchés d’accéder aux ressources du réseau local.</string>
+      <string id="LocalNetworkAccess_EnablePrompting">Activer la demande d’autorisation</string>
+      <string id="LocalNetworkAccess_EnablePrompting_Explain">Si cette stratégie est activée, les sites web doivent demander explicitement l’autorisation de l’utilisateur avant d’accéder aux ressources du réseau local.
+
+Si cette stratégie est désactivée ou non configurée, les sites web ne sont pas tenus de demander une autorisation d’accès au réseau local.</string>
+      <string id="LocalNetworkAccess_SkipDomains">Domaines à ignorer</string>
+      <string id="LocalNetworkAccess_SkipDomains_Explain">Une liste de noms de domaine pour lesquels les contrôles d’accès au réseau local sont ignorés.</string>
+      <string id="LocalNetworkAccess_Locked">Verrouillé</string>
+      <string id="LocalNetworkAccess_Locked_Explain">Si cette stratégie est activée, l’utilisateur ne peut pas modifier les paramètres d’accès au réseau local.
+
+Si cette stratégie est désactivée ou non configurée, l’utilisateur peut modifier les paramètres d’accès au réseau local.</string>
       <string id="Preferences_Boolean_Explain">Si cette stratégie est activée, la préférence est verrouillée sur "true". Si cette stratégie est désactivée, la préférence est verrouillée sur "false".
 
 Pour une description de la préférence, consultez :
@@ -1518,6 +1544,9 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences.</
       </presentation>
       <presentation id="RequestedLocales">
         <listBox refId="RequestedLocales"/>
+      </presentation>
+      <presentation id="LocalNetworkAccess_SkipDomains">
+        <listBox refId="LocalNetworkAccess_SkipDomains"/>
       </presentation>
       <presentation id="SecurityDevices">
         <listBox refId="SecurityDevices"/>
